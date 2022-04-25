@@ -14,7 +14,10 @@ html, body {
 
 
 .row {
-  height:95%;
+  height:2%;
+  width:50%;
+  margin-bottom:20px;
+  /*left:5%;*/
 }
 /* Create three unequal columns that floats next to each other */
 .column {
@@ -181,3 +184,58 @@ h3{
   margin:0 auto;
 }
 
+
+.scene {
+  /*border: 1px solid #CCC;*/
+  /*margin: 40px 0;*/
+  position: relative;
+  width: 800px;
+  height: 800px;
+  margin: 0 auto;
+  perspective: 1000px;
+  top:5%;
+  bottom:0;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translateZ(-288px);
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  /*transform: rotateX(50deg);*/
+}
+
+
+
+.carousel__cell {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  /*border: 2px solid blue;*/
+  text-align: center;
+  transition: transform 1s, opacity 1s;
+}
+
+
+.carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(288px); }
+.carousel__cell:nth-child(2) { transform: rotateY( 40deg) translateZ(288px); }
+.carousel__cell:nth-child(3) { transform: rotateY( 80deg) translateZ(288px); }
+.carousel__cell:nth-child(4) { transform: rotateY(120deg) translateZ(288px); }
+.carousel__cell:nth-child(5) { transform: rotateY(160deg) translateZ(288px); }
+.carousel__cell:nth-child(6) { transform: rotateY(200deg) translateZ(288px); }
+.carousel__cell:nth-child(7) { transform: rotateY(240deg) translateZ(288px); }
+.carousel__cell:nth-child(8) { transform: rotateY(280deg) translateZ(288px); }
+.carousel__cell:nth-child(9) { transform: rotateY(320deg) translateZ(288px); }
+
+
+
+.carousel-options {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  background: hsla(0, 0%, 100%, 0.8);
+  margin-top:-25px;
+}
+}
